@@ -9,3 +9,14 @@ Collection of TIL tidbits
 ## VS Code
 
 - You can configure a set of "Recommended" extensions for a project that will be suggested to other users of the same project - [Recommended Extensions](https://code.visualstudio.com/docs/editor/extension-marketplace#_recommended-extensions)
+- Alias `code ,` to `code .` to stop constantly accidentally opening an empty file instead of CWD. Add the following to `.zshrc` or equivalent:
+
+  ```sh
+  code() {
+    if [[ $@ == "," ]]; then
+        command code .
+    else
+        command code "$@"
+    fi
+  }
+  ```
