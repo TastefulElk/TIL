@@ -5,6 +5,7 @@ Collection of TIL tidbits
 ## Git
 
 - Use `includeIf` directive to conditionally set git credentials based on project location on disk - [conditional credentials](https://dev.to/tastefulelk/conditional-git-profile-configuration-212b)
+- Use `git worktree` to add a temporary copy of your repository to avoid having to stash/commit changes when for example reviewing a PR or experimenting. Ex. `git worktree -b some-pr-branch ../repo-pr#32`
 
 ## VS Code
 
